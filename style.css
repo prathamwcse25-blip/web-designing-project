@@ -1,3 +1,21 @@
+.tag-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 12px;
+    color: lightgray;
+    border-left: 3px solid transparent;
+    transition: 0.3s;
+}
+.tag-item:hover {
+    background-color: darkcyan;
+    color: black;
+    border-left: 3px solid aqua;
+    transform: translateX(6px);
+}
 body {
     font-family: Arial, sans-serif;
     margin: 0;
