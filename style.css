@@ -1,31 +1,35 @@
 body {
-    font-family: Arial;
+    font-family: Arial, sans-serif;
     margin: 0;
     background-color: black;
     color: white;
 }
 
+/* Heading */
 h1 {
     text-align: center;
     padding: 15px;
-    background-color: #222;
+    background-color: darkblue;
+    color: white;
 }
 
+/* Main Layout */
 .container {
     display: flex;
-    gap: 20px;
-    padding: 20px;
+    gap: 15px;
+    padding: 15px;
 }
 
+/* Tutorial Section */
 .tutorial {
     width: 40%;
-    background-color: #1e1e1e;
+    background-color: navy;
     padding: 15px;
-    border-radius: 10px;
+    border-radius: 8px;
 }
 
 .tutorial h2 {
-    color: lightblue;
+    color: skyblue;
 }
 
 .tutorial a {
@@ -35,39 +39,45 @@ h1 {
 
 .tutorial a:hover {
     text-decoration: underline;
+    color: yellow;
 }
 
+/* Playground Section */
 .playground {
     width: 60%;
-    background-color: #1e1e1e;
+    background-color: navy;
     padding: 15px;
-    border-radius: 10px;
+    border-radius: 8px;
 }
 
+/* Input Box */
 textarea {
     width: 100%;
     height: 200px;
-    background-color: #333;
+    background-color: gray;
     color: white;
-    border: none;
+    border: 1px solid white;
     padding: 10px;
     border-radius: 5px;
 }
 
+/* Output Box */
 iframe {
     width: 100%;
     height: 200px;
     background-color: white;
-    border: none;
+    border: 1px solid black;
     margin-top: 10px;
 }
 
+/* Buttons */
 button {
     margin-top: 10px;
     padding: 8px 15px;
     border: none;
     border-radius: 5px;
     background-color: lightblue;
+    color: black;
     cursor: pointer;
 }
 
