@@ -1,72 +1,100 @@
-
-body {
-    font-family: Arial, sans-serif;
+/* Reset */
+* {
     margin: 0;
-    background-color: black;
-    color: white;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body */
+body {
+    background: #f4f6f9;
+    color: #333;
+    padding: 20px;
+}
+
 /* Heading */
 h1 {
     text-align: center;
-    padding: 15px;
-    background-color: darkblue;
-    color: white;
+    margin-bottom: 20px;
+    color: #2c3e50;
 }
 
-/* Main Layout */
+/* Layout */
 .container {
     display: flex;
     gap: 15px;
+    flex-wrap: wrap;
+}
+
+/* Boxes */
+.tutorial, .playground {
+    flex: 1;
+    min-width: 300px;
+    background: #fff;
     padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-/* Tutorial Section */
-.tutorial {
-    width: 40%;
-    background-color: navy;
-    padding: 15px;
-    border-radius: 8px;
+/* Section Titles */
+h2 {
+    margin: 12px 0;
+    color: #0077cc;
 }
 
-.tutorial h2 {
-    color: skyblue;
+/* Links */
+ul {
+    list-style: none;
 }
 
-.tutorial a {
-    color: lightgreen;
+ul li {
+    margin: 6px 0;
+}
+
+ul li a {
     text-decoration: none;
+    color: #0077cc;
+    padding: 5px 8px;
+    border-radius: 5px;
+    transition: 0.3s;
 }
 
-.tutorial a:hover {
-    text-decoration: underline;
-    color: yellow;
+ul li a:hover {
+    background: #0077cc;
+    color: #fff;
 }
 
-/* Playground Section */
-.playground {
-    width: 60%;
-    background-color: navy;
-    padding: 15px;
-    border-radius: 8px;
+/* Text */
+p {
+    margin: 5px 0;
+    font-size: 14px;
 }
 
-/* Input Box */
+/* Textarea */
 textarea {
     width: 100%;
-    height: 200px;
-    background-color: gray;
-    color: white;
-    border: 1px solid white;
+    height: 180px;
+    margin-top: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
     padding: 10px;
-    border-radius: 5px;
+    resize: none;
+    outline: none;
 }
 
-/* Output Box */
+textarea:focus {
+    border-color: #0077cc;
+}
+
+/* Output */
 iframe {
     width: 100%;
-    height: 200px;
-    background-color: white;
-    border: 1px solid black;
+    height: 180px;
     margin-top: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background: #fff;
 }
 
 /* Buttons */
@@ -74,12 +102,34 @@ button {
     margin-top: 10px;
     padding: 8px 15px;
     border: none;
-    border-radius: 5px;
-    background-color: lightblue;
-    color: black;
+    border-radius: 6px;
     cursor: pointer;
+    transition: 0.3s;
 }
 
-button:hover {
-    background-color: cyan;
+/* Run */
+button:first-of-type {
+    background: #0077cc;
+    color: white;
+}
+
+button:first-of-type:hover {
+    background: #005fa3;
+}
+
+/* Clear */
+button:last-of-type {
+    background: #e74c3c;
+    color: white;
+}
+
+button:last-of-type:hover {
+    background: #c0392b;
+}
+
+/* Responsive */
+@media(max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
 }
