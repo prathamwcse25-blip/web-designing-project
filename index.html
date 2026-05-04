@@ -6,8 +6,7 @@
 
 <body>
 
-<!-- Navigation -->
-<div style="background-color: steelblue; padding: 12px; border-radius: 10px; margin-bottom: 15px; display:flex; justify-content:space-between; align-items:center;">
+<div style="background-color: #1e293b; padding: 12px; border-radius: 10px; margin-bottom: 15px; display:flex; justify-content:space-between; align-items:center;">
     
     <div>
         <b style="color:white;">Code Playground</b>
@@ -50,19 +49,19 @@
     <div class="playground">
         <h2>💻 Write your code here</h2>
 
-        <textarea placeholder="Write HTML code here......"></textarea>
+        <textarea id="code" placeholder="Write HTML code here......"></textarea>
 
         <h2>📊 Output</h2>
-        <iframe></iframe>
+        <iframe id="output"></iframe>
 
-        <button>Run Code</button>
-        <button>Clear</button>
+        <button onclick="runCode()">Run Code</button>
+        <button onclick="clearCode()">Clear</button>
     </div>
 
 </div>
 
-<!-- Guide -->
-<div style="margin-top: 15px; background: aliceblue; padding: 12px; border-radius: 10px;">
+<!-- ✅ FIXED GUIDE -->
+<div class="guide">
     <h2>📌 How to Use This HTML Playground</h2>
 
     <p>1. Type your HTML code in the textarea.</p>
@@ -71,6 +70,20 @@
     <p>4. Click "Clear" to remove the code.</p>
     <p>5. Practice different HTML tags.</p>
 </div>
+
+<!-- ✅ JavaScript -->
+<script>
+function runCode() {
+    var code = document.getElementById("code").value;
+    var iframe = document.getElementById("output");
+    iframe.srcdoc = code;
+}
+
+function clearCode() {
+    document.getElementById("code").value = "";
+    document.getElementById("output").srcdoc = "";
+}
+</script>
 
 </body>
 </html>
